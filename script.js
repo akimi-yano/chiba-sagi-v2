@@ -95,7 +95,7 @@ const flowData = {
         image: IMAGES.THREAT,
         choices: [
             { text: "無実を訴える", next: "step_video_offer", style: "btn-primary" },
-            { text: "はい", next: "step_admit_fear", style: "btn-danger" }
+            { text: "はい", next: "end_arrest_acceptance", style: "btn-safe" }
         ]
     },
     end_callback_check: {
@@ -156,6 +156,14 @@ const flowData = {
         speaker: "解説",
         text: "警察へ通報！<br>だまされたフリ作戦に協力しましょう！",
         advice: "家族や警察（#9110）に相談したあなたの勝利です。",
+        image: IMAGES.SUCCESS,
+        isEnd: true,
+        type: "super_safe"
+    },
+    end_arrest_acceptance: {
+        speaker: "解説",
+        text: "正解です！<br>警察へ通報！<br>だまされたフリ作戦に協力しましょう！",
+        advice: "本物の警察は電話でお金を要求したり、逮捕状を理由に脅したりしません。あなたの判断は正しかったです。",
         image: IMAGES.SUCCESS,
         isEnd: true,
         type: "super_safe"
