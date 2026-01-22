@@ -284,20 +284,8 @@ function renderNode(nodeId, pushToHistory = true) {
         sceneImg.src = node.image;
     }
 
-    // Update Advice
-    if (node.advice) {
-        adviceBox.innerHTML = `💡 ポイント：${node.advice}`;
-        adviceBox.classList.remove('hidden');
-        if (node.type === 'danger') {
-            adviceBox.className = 'advice-box warning';
-        } else if (node.type === 'safe' || node.type === 'super_safe') {
-            adviceBox.className = 'advice-box safe';
-        } else {
-            adviceBox.className = 'advice-box';
-        }
-    } else {
-        adviceBox.classList.add('hidden');
-    }
+    // Update Advice - Hidden
+    adviceBox.classList.add('hidden');
 
     // Clear previous choices
     choicesContainer.innerHTML = '';
